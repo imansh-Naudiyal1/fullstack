@@ -81,4 +81,116 @@ const products = [
   { name: "Neha", age: 25 }
 ];
 const adultsStudents = users1.filter(users1 => users1.age >= 18);
-console.log(adultsStudents);
+// console.log(adultsStudents);
+
+const products1 = [
+  { name: "A", price: 100 },
+  { name: "B", price: 500 },
+  { name: "C", price: 50 }
+];
+const expenseProducts = products1.filter(products1 => products1.price > 100);
+// console.log(expenseProducts);
+
+// print all even numbers using by forEach
+
+const number2 = [1,2,3,4,5];
+const evenNumbers1 = [];
+number2.forEach(num => {
+  if(num % 2 === 0){
+    evenNumbers1.push(num);
+  }
+  return evenNumbers1;
+});
+// console.log(evenNumbers1);
+
+// find sum of array using forEach
+
+const number3 =[1,2,3,4,5];
+let sum = 0;
+number3.forEach(num => {
+  sum += num;
+});
+// console.log(sum);
+
+// convert this into forEach 
+// for(let i=0; i < arr.length; i++){
+//    console.log(arr[i]);
+// }
+
+const arr =[1,2,3,4,5];
+// arr.forEach(num => console.log(num));
+
+// some question
+
+let arr1 = [1,2,3,4,5];
+let arr2 = arr1.map(num => num *2)
+// console.log(arr2);
+
+let numbersEven = [1,2,3,4,5,6];
+let evenNumbers2 = numbersEven.filter(num => num % 2 === 0);   
+// console.log(evenNumbers2);
+
+
+let arr3 = [1,2,3,4,5];
+let sum1 = 0;
+arr3.forEach(num => sum1 += num);
+// console.log(sum1);
+
+// extract Names use object destructuring object.value() method
+
+let users2 = [
+ {name:"A", age:20},
+ {name:"B", age:30}
+]
+let userNames = Object.values(users2).map(user => user.name);
+// console.log(userNames);
+
+// adults only
+
+ let adults = [
+ {name:"A", age:20},
+ {name:"B", age:17},
+ {name:"C", age:25}
+ ];
+ let adultOnly = adults.filter(adults => adults.age >= 18);
+//  console.log(adultOnly);
+
+// price filter + transform
+let shoppingPrice =[
+ {name:"A", price:100},
+ {name:"B", price:200},
+ {name:"C", price:50}
+];
+let prices = shoppingPrice.filter(shoppingPrice => shoppingPrice.price >= 100);
+// console.log(prices);
+
+// reduce
+ let salaries =[
+ {salary:100},
+ {salary:200},
+ {salary:300}
+];
+ let totalSalary = salaries.reduce((total , salary) => total + salary.salary, 0);
+//  console.log(totalSalary);
+
+let CountEven = [1,2,3,4,5,6];
+let evenCount = CountEven.reduce((count , num) => {
+  if(num % 2 === 0){
+    return count + 1;
+  }
+  return count;
+}, 0);
+// console.log(evenCount);
+
+
+// { A:20, B:30 } we want output this and build object skills
+
+let users3 = [
+ {name:"A", age:20},
+ {name:"B", age:30}
+]
+let userObject = users3.reduce((obj, user) => {
+  obj[user.name] = user.age;
+  return obj;
+}, {});
+console.log(userObject);
