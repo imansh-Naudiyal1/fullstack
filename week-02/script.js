@@ -1,3 +1,5 @@
+// CallBack 
+
 function process(callback) {
   console.log("Processing...");
   callback();
@@ -24,6 +26,14 @@ function sum(a,b,callback){
     callback(result);
 }
 sum(10,20,(ans => {
-    console.log("my answer " + ans);
+    // console.log("my answer " + ans);
  
 }) )
+
+console.log("1");
+
+setTimeout(() => console.log("2"), 0);
+
+Promise.resolve().then(() => console.log("3"));
+
+console.log("4");
