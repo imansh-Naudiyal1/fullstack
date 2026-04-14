@@ -1,3 +1,4 @@
+// Console based project
 class Expense {
     constructor(title,amount,category,date){
         this.title = title
